@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+   <style>
+      html
+      { height:100%;
+      }
+      body{
+         background-color: darkturquoise;
+           background-repeat: no-repeat;
+          background-size: 100% 100%;
+          margin: 0;
+          padding:0;
+        }
+ 
+    .input
+    {
+      position:absolute;
+      top:30%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    .output
+    {
+      position:absolute;
+      top:60%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    button
+    {
+       background: rgb(6, 238, 18);
+    }
+    audio::-webkit-media-controls-play-button
+            
+      {
+             background-color:green;
+      }
+      h3
+    {
+       color:darkslategray;
+       font-style:oblique;
+    }
+
+   </style>  
+   <body>  
+      <center>
+         
+      <form class=input action = "http://localhost:5000/text_option" method = "post">  
+         <div class="field">
+            <h3>Enter your text to convert into voice</h3>
+            <textarea name='speech' rows="10" cols="50" placeholder="enter your text..."></textarea>
+         </div>
+         <br>
+         <br>
+        <button type="submit" name="submit" >convert</button>
+      
+      </form>  
+   </center> 
+   <center>
+      <form class=output action = "http://localhost:5000/reset" method = "post"> 
+        <audio controls >
+           <br>
+           <br>
+         <source src="{{url_for('static',filename=file_name)}}"type="audio/mpeg">
+       </audio>
+         <button type=submit name=reset>reset</button>
+      </form>
+   </center>
+   </body>  
+</html>  

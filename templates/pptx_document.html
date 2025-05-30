@@ -1,0 +1,17 @@
+<html>
+   <body>
+      <form action = "http://localhost:5000/pptx" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>  
+      <form action = "http://localhost:5000/delete" method = "post"> 
+         <!--<audio controls autoplay="autoplay" preload="auto">-->
+          <audio controls >
+           <source src="{{url_for('static',filename=file_name)}}"type="audio/mpeg">
+         </audio>
+           <button type=submit name=reset>reset</button>
+           </form>
+     </body> 
+   </body>
+</html>

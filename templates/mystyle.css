@@ -1,0 +1,83 @@
+body{
+    background-color: darkturquoise;
+         background-size: 100% 100%;
+         margin: 0;
+         padding:0;
+      }
+  h1{color:rgb(52, 48, 85);
+     font-family:'Times New Roman', Times, serif;
+     font-size:200%;
+     }
+  .box
+  {
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+  .box select
+  {
+    background:rgb(80, 148, 211);
+    color:rgb(221, 231, 233);
+    padding:10px;
+    width:250px;
+    height:50px;
+    border:none;
+    font-size:20px;
+    box-shadow:0 5px 25 px rgba(0,0,0,5);
+    -webkit-appearance: button;
+    outline:none;
+
+  }
+  output.button
+  {
+    background:forestgreen;
+    font-size:20px;
+    color:ivory;
+    box-shadow:0 5px 25 px rgba(0,0,0,5);
+    -webkit-appearence:button;
+  }
+  .input-group-addon
+  {
+    font-size:30px;
+    color:lemonchiffon;
+  }
+     .input
+    {
+      position:absolute;
+      top:30%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    .output
+    {
+      position:absolute;
+      top:60%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    audio::-webkit-media-controls-play-button
+            
+            {
+             background-color:green;
+             }
+             label {
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+button
+    {
+       background: rgb(6, 238, 18);
+    }
+    h3
+    {
+       color:darkslategray;
+       font-style:oblique;
+    }
+
+   

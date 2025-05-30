@@ -1,0 +1,73 @@
+
+<!Doctype html>
+<html>
+  <meta name="viewport" charset="UTF-8"
+    content="width=device-width,initial-scale=1.0">
+  <style>
+    body{
+      background-color: darkturquoise;
+           background-size: 100% 100%;
+           margin: 0;
+           padding:0;
+        }
+    h1{color:rgb(52, 48, 85);
+       font-family:'Times New Roman', Times, serif;
+       font-size:200%;
+       }
+    .box
+    {
+      position:absolute;
+      top:30%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    .box select
+    {
+      background:rgb(80, 148, 211);
+      color:rgb(221, 231, 233);
+      padding:10px;
+      width:250px;
+      height:50px;
+      border:none;
+      font-size:20px;
+      box-shadow:0 5px 25 px rgba(0,0,0,5);
+      -webkit-appearance: button;
+      outline:none;
+
+    }
+    button
+    {
+      background:forestgreen;
+      font-size:20px;
+      color:ivory;
+      box-shadow:0 5px 25 px rgba(0,0,0,5);
+      -webkit-appearence:button;
+    }
+    .input-group-addon
+    {
+      font-size:30px;
+      color:lemonchiffon;
+    }
+  </style>
+<body>
+  <h1><center>TEXT TO VOICE APPLICATION</center></h1>
+     <center>
+     <form class="form-inline" method="POST" action="{{ url_for('test') }}">
+        <div class="box">
+
+          <center><span class="input-group-addon"><strong>Select the option to convert the text to voice<strong></span></center>
+             <br>
+             <center>
+              <select name="comp_select" class="selectpicker form-control">
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+              </select>
+            </center>
+      <button type="submit" class="btn btn-default">select</button>
+    </div>
+  </form>
+  </center>
+  
+  </body>
+</html>

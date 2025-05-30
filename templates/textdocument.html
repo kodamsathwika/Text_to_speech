@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+  
+   <style>
+      body{
+           background-color: darkturquoise;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          margin: 0;
+          padding:0;
+        }
+    .input
+    {
+      position:absolute;
+      top:30%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    .output
+    {
+      position:absolute;
+      top:60%;
+      left:50%;
+      transform:translate(-50%,-50%);
+    }
+    audio::-webkit-media-controls-play-button
+            
+    {
+       background-color:green;
+    }
+    label
+    {
+        background-color: indigo;
+       color: white;
+       padding: 0.5rem;
+       font-family: sans-serif;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+     }
+     button
+     {
+       background: rgb(6, 238, 18);
+     }
+    h3
+    {
+       color:darkslategray;
+       font-style:oblique;
+    }
+
+    
+   </style>  
+   <body>  
+      <center>
+
+      <form class=input action = "http://localhost:5000/textdoc" method = "POST" 
+         
+          enctype = "multipart/form-data">
+          <h3>Upload or select the text document file from your device</h3>
+     
+         <label class="custom-file-upload">
+            <input type="file" name="file"/>
+            <input type="submit"/>
+        </label>
+        
+      
+      </form>  
+      </center>
+      <center>
+      <form class=output action = "http://localhost:5000/reset" method = "post"> 
+         <!--<audio controls autoplay="autoplay" preload="auto">-->
+          <audio controls >
+           <source src="{{url_for('static',filename=file_name)}}"type="audio/mpeg">
+         </audio>
+           <button type=submit name=reset>reset</button>
+           </form>
+         </center>
+     </body> 
+   </body>
+</html>
